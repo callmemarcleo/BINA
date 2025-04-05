@@ -1,4 +1,4 @@
-from bina_models import Listing, Review, Neighbourhood
+from bina_models import Listing
 from db_client_handler import SupabaseClient
 
 
@@ -10,7 +10,7 @@ class AirbnbAnalysisService:
         self.supabase_client = SupabaseClient().get_client()
 
     def get_listings(self):
-        raw_listings = self.supabase_client.table("listings").select("*").execute().data
+        raw_listings = self.supabase_client.table("Listing").select("*").execute().data
         listings: list[Listing] = [Listing(**item) for item in raw_listings]
 
         return listings
