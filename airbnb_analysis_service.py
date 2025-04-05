@@ -14,15 +14,3 @@ class AirbnbAnalysisService:
         listings: list[Listing] = [Listing(**item) for item in raw_listings]
 
         return listings
-
-    def get_neighbourhoods(self):
-        raw_neighbourhoods = self.supabase_client.table("neighbourhoods").select("*").execute().data
-        neighbourhoods: list[Neighbourhood] = [Neighbourhood(**item) for item in raw_neighbourhoods]
-
-        return neighbourhoods
-
-    def get_reviews(self):
-        raw_reviews = self.supabase_client.table("reviews").select("*").execute().data
-        reviews: list[Review] = [Review(**item) for item in raw_reviews]
-
-        return reviews
