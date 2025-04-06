@@ -10,7 +10,7 @@ class AirbnbAnalysisService:
         self.supabase_client = SupabaseClient().get_client()
 
     def get_listings(self):
-        raw_listings = self.supabase_client.table("Listing").select("*").execute().data
+        raw_listings = self.supabase_client.table("cleaned_listings").select("*").execute().data
         listings: list[Listing] = [Listing(**item) for item in raw_listings]
 
         return listings

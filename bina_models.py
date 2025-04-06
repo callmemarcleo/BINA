@@ -43,7 +43,7 @@ class Listing:
     bathrooms_text: str
     bedrooms: str
     beds: str
-    amneties: list[str]
+    amenities: list[str]
     price: str
     minimum_nights: int
     maximum_nights: int
@@ -59,7 +59,7 @@ class Listing:
     availability_60: str
     availability_90: str
     availability_365: str
-    calender_last_scraped: str
+    calendar_last_scraped: str
     number_of_reviews: str
     number_of_reviews_ltm: str
     number_of_reviews_l30d: str
@@ -79,7 +79,7 @@ class Listing:
     calculated_host_listings_count_private_rooms: str
     calculated_host_listings_count_shared_rooms: str
     reviews_per_month: str
-    review_scores_dependent: bool
+    missing_data_flag: bool
 
 
 
