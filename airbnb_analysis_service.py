@@ -14,3 +14,5 @@ class AirbnbAnalysisService:
         listings: list[Listing] = [Listing(**item) for item in raw_listings]
 
         return listings
+
+print(AirbnbAnalysisService().get_listings())
