@@ -22,7 +22,7 @@ class Listing:
     host_about: Optional[str]
     host_response_time: Optional[str]
     host_response_rate: Optional[str]
-    host_acceptance_rate: Optional[int]
+    host_acceptance_rate_percent: Optional[int]
     host_is_superhost: Optional[bool]
     host_thumbnail_url: Optional[str]
     host_picture_url: Optional[str]
