@@ -78,4 +78,23 @@ class Listing:
     missing_data_flag: Optional[bool]
 
 
-
+@dataclass
+class SellingPrices:
+    stichtagdatjahr: Optional[int]
+    datenstandcd: Optional[str]
+    haartlevel1sort: Optional[int]
+    haartlevel1cd: Optional[int]
+    haartlevel1lang: Optional[str]
+    hastwesort: Optional[int]
+    hastwecd: Optional[str]
+    hastwelang: Optional[str]
+    raumsort: Optional[str]
+    raumcd: Optional[str]
+    raumlang: Optional[str]
+    anzzimmerlevel2sort_nodm: Optional[int]
+    anzzimmerlevel2cd_nodm: Optional[int]
+    anzzimmerlevel2lang_nodm: Optional[str]
+    anzha: Optional[str]
+    hapreiswohnflaeche: Optional[int]
+    hamedianpreis: Optional[int]
+    hasumpreis: Optional[int]

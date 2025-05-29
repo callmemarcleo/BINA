@@ -9,11 +9,14 @@ if __name__ == "__main__":
 
     # get all tables in form of a list
     listings = airbnbAnalysis.get_listings()
+    selling_prices = airbnbAnalysis.get_selling_prices()
 
-    print(f"listings {listings}")
+    print(f"selling_prices {len(selling_prices)}")
+    print(f"listings {len(listings)}")
 
     # Schritt 1: Umwandeln in DataFrames
     listings_df = pd.DataFrame([l.__dict__ for l in listings])
+    selling_prices_df = pd.DataFrame([s.__dict__ for s in selling_prices])
     #
     # # Schritt 2: Daten aufbereiten
     # listings_df['price'] = pd.to_numeric(listings_df['price'], errors='coerce').fillna(0)
